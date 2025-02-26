@@ -9,7 +9,7 @@ import { useRedux } from 'hooks';
 // lazy load all the views
 
 // auth
-const Login = React.lazy(() => import('pages/account/Login'));
+const Login = React.lazy(() => import('pages/account/Login2'));
 const Logout = React.lazy(() => import('pages/account/Logout'));
 const Register = React.lazy(() => import('pages/account/Register'));
 const Confirm = React.lazy(() => import('pages/account/Confirm'));
