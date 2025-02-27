@@ -20,7 +20,7 @@ const ProductColumn = ({ row }: CellFormatter<Product>) => {
                 height="48"
             />
             <p className="m-0 d-inline-block align-middle font-16">
-                <Link to="/apps/ecommerce/details" className="text-body">
+                <Link to="/intranet/cadastro-detalhes" className="text-body">
                     {row.original.name}
                 </Link>
                 <br />
@@ -57,7 +57,7 @@ const ActionColumn = ({ row }: CellFormatter<Product>) => {
                 {' '}
                 <i className="mdi mdi-eye"></i>
             </Link>
-            <Link to="#" className="action-icon">
+            <Link to="intranet/cadastro-detalhes" className="action-icon">
                 {' '}
                 <i className="mdi mdi-square-edit-outline"></i>
             </Link>
@@ -136,10 +136,9 @@ const Products = () => {
         <>
             <PageTitle
                 breadCrumbItems={[
-                    { label: 'eCommerce', path: '/apps/ecommerce/products' },
-                    { label: 'Products', path: '/apps/ecommerce/products', active: true },
+                    { label: 'Cadastros', path: '/intranet/cadastro', active: true },
                 ]}
-                title={'Products'}
+                title={'Cadastros'}
             />
 
             <Row>
@@ -149,7 +148,7 @@ const Products = () => {
                             <Row className="mb-2">
                                 <Col sm={5}>
                                     <Link to="#" className="btn btn-danger mb-2">
-                                        <i className="mdi mdi-plus-circle me-2"></i> Add Products
+                                        <i className="mdi mdi-plus-circle me-2"></i> Criar novo cadastro
                                     </Link>
                                 </Col>
 

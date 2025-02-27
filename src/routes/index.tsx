@@ -19,8 +19,9 @@ const LockScreen = React.lazy(() => import('pages/account/LockScreen2'));
 // dashboard
 const EcommerceDashboard = React.lazy(() => import('pages/dashboard/Ecommerce'));
 
-// - ecommece pages
-const EcommerceProducts = React.lazy(() => import('pages/apps/Ecommerce/Products'));
+//intranet
+const IntranetRegistration = React.lazy(() => import('pages/apps/Registration/Registrations'));
+const RegistrationDetails = React.lazy(() => import('pages/apps/Registration/RegistrationDetails'));
 
 // pages
 const ErrorPageNotFound = React.lazy(() => import('pages/error/PageNotFound'));
@@ -180,16 +181,15 @@ const AllRoutes = () => {
                     ],
                 },
                 {
-                    path: 'apps',
+                    path: 'intranet',
                     children: [
                         {
-                            path: 'ecommerce',
-                            children: [
-                                {
-                                    path: 'products',
-                                    element: <LoadComponent component={EcommerceProducts} />,
-                                },
-                            ],
+                            path: 'cadastro',
+                            element: <LoadComponent component={IntranetRegistration} />,
+                        },
+                        {
+                            path: 'cadastro-detalhes',
+                            element: <LoadComponent component={RegistrationDetails} />,
                         },
                     ],
                 },
