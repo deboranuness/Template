@@ -16,9 +16,6 @@ const Confirm = React.lazy(() => import('pages/account/Confirm2'));
 const ForgetPassword = React.lazy(() => import('pages/account/ForgetPassword2'));
 const LockScreen = React.lazy(() => import('pages/account/LockScreen2'));
 
-// dashboard
-const EcommerceDashboard = React.lazy(() => import('pages/dashboard/Ecommerce'));
-
 //intranet
 const IntranetHome = React.lazy(() => import('pages/intranet/Home'));
 const IntranetRegistration = React.lazy(() => import('pages/apps/Registration/Registrations'));
@@ -173,13 +170,8 @@ const AllRoutes = () => {
             element: <PrivateRoute roles={'Admin'} component={Layout} />,
             children: [
                 {
-                    path: 'dashboard',
-                    children: [
-                        {
-                            path: 'ecommerce',
-                            element: <LoadComponent component={EcommerceDashboard} />,
-                        },
-                    ],
+                    path: 'intranet',
+                    element: <LoadComponent component={IntranetHome} />,
                 },
                 {
                     path: 'intranet',

@@ -149,21 +149,6 @@ const MENU_ITEMS: MenuItemType[] = [
             },
         ],
     },
-    { key: 'navigation', label: 'Navigation', isTitle: true },
-    {
-        key: 'dashboards',
-        label: 'Dashboards',
-        isTitle: false,
-        icon: 'uil-home-alt',
-        children: [
-            {
-                key: 'ds-ecommerce',
-                label: 'Ecommerce',
-                url: '/dashboard/ecommerce',
-                parentKey: 'dashboards',
-            },
-        ],
-    },
 
     { key: 'custom', label: 'Custom', isTitle: true },
     {
