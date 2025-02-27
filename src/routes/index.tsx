@@ -20,6 +20,7 @@ const LockScreen = React.lazy(() => import('pages/account/LockScreen2'));
 const EcommerceDashboard = React.lazy(() => import('pages/dashboard/Ecommerce'));
 
 //intranet
+const IntranetHome = React.lazy(() => import('pages/intranet/Home'));
 const IntranetRegistration = React.lazy(() => import('pages/apps/Registration/Registrations'));
 const RegistrationDetails = React.lazy(() => import('pages/apps/Registration/RegistrationDetails'));
 
@@ -183,6 +184,10 @@ const AllRoutes = () => {
                 {
                     path: 'intranet',
                     children: [
+                        {
+                            path: 'home',
+                            element: <LoadComponent component={IntranetHome} />,
+                        },
                         {
                             path: 'cadastro',
                             element: <LoadComponent component={IntranetRegistration} />,
