@@ -10,83 +10,25 @@ import { useRedux } from 'hooks';
 
 // auth
 const Login = React.lazy(() => import('pages/account/Login2'));
-const Logout = React.lazy(() => import('pages/account/Logout'));
-const Register = React.lazy(() => import('pages/account/Register'));
-const Confirm = React.lazy(() => import('pages/account/Confirm'));
-const ForgetPassword = React.lazy(() => import('pages/account/ForgetPassword'));
-const LockScreen = React.lazy(() => import('pages/account/LockScreen'));
-
-const Login2 = React.lazy(() => import('pages/account/Login2'));
-const Logout2 = React.lazy(() => import('pages/account/Logout2'));
-const Register2 = React.lazy(() => import('pages/account/Register2'));
-const Confirm2 = React.lazy(() => import('pages/account/Confirm2'));
-const ForgetPassword2 = React.lazy(() => import('pages/account/ForgetPassword2'));
-const LockScreen2 = React.lazy(() => import('pages/account/LockScreen2'));
+const Logout = React.lazy(() => import('pages/account/Logout2'));
+const Register = React.lazy(() => import('pages/account/Register2'));
+const Confirm = React.lazy(() => import('pages/account/Confirm2'));
+const ForgetPassword = React.lazy(() => import('pages/account/ForgetPassword2'));
+const LockScreen = React.lazy(() => import('pages/account/LockScreen2'));
 
 // dashboard
-const AnalyticsDashboard = React.lazy(() => import('pages/dashboard/Analytics'));
 const EcommerceDashboard = React.lazy(() => import('pages/dashboard/Ecommerce'));
-const ProjectDashboard = React.lazy(() => import('pages/dashboard/Project'));
-const EWalletDashboard = React.lazy(() => import('pages/dashboard/E-Wallet'));
-
-// apps
-const CalendarApp = React.lazy(() => import('pages/apps/Calendar'));
-const ProjectList = React.lazy(() => import('pages/apps/Projects/List'));
-const ProjectDetail = React.lazy(() => import('pages/apps/Projects/Detail/'));
-const ProjectGannt = React.lazy(() => import('pages/apps/Projects/Gantt'));
-const ProjectForm = React.lazy(() => import('pages/apps/Projects/ProjectForm'));
-
-// - chat
-const ChatApp = React.lazy(() => import('pages/apps/Chat/'));
-
-// -crm
-const CRMDashboard = React.lazy(() => import('pages/apps/CRM/Dashboard'));
-const CRMProjects = React.lazy(() => import('pages/apps/CRM/Projects'));
-const CRMManagement = React.lazy(() => import('pages/apps/CRM/Management'));
-const CRMClients = React.lazy(() => import('pages/apps/CRM/Clients'));
-const CRMOrderList = React.lazy(() => import('pages/apps/CRM/OrderList'));
 
 // - ecommece pages
 const EcommerceProducts = React.lazy(() => import('pages/apps/Ecommerce/Products'));
-const ProductDetails = React.lazy(() => import('pages/apps/Ecommerce/ProductDetails'));
-const Orders = React.lazy(() => import('pages/apps/Ecommerce/Orders'));
-const OrderDetails = React.lazy(() => import('pages/apps/Ecommerce/OrderDetails'));
-const Customers = React.lazy(() => import('pages/apps/Ecommerce/Customers'));
-const Cart = React.lazy(() => import('pages/apps/Ecommerce/Cart'));
-const Checkout = React.lazy(() => import('pages/apps/Ecommerce/Checkout/'));
-const Sellers = React.lazy(() => import('pages/apps/Ecommerce/Sellers'));
-
-// - email
-const Inbox = React.lazy(() => import('pages/apps/Email/Inbox'));
-const EmailDetail = React.lazy(() => import('pages/apps/Email/Detail'));
-
-// - social
-const SocialFeed = React.lazy(() => import('pages/apps/SocialFeed/'));
-
-// - tasks
-const TaskList = React.lazy(() => import('pages/apps/Tasks/List/'));
-const TaskDetails = React.lazy(() => import('pages/apps/Tasks/Details'));
-const Kanban = React.lazy(() => import('pages/apps/Tasks/Board/'));
-// - file
-const FileManager = React.lazy(() => import('pages/apps/FileManager'));
 
 // pages
-const Profile = React.lazy(() => import('pages/profile'));
-const Profile2 = React.lazy(() => import('pages/profile2'));
 const ErrorPageNotFound = React.lazy(() => import('pages/error/PageNotFound'));
 const ErrorPageNotFoundAlt = React.lazy(() => import('pages/error/PageNotFoundAlt'));
 const ServerError = React.lazy(() => import('pages/error/ServerError'));
 
 // - other
-const Invoice = React.lazy(() => import('pages/other/Invoice'));
-const FAQ = React.lazy(() => import('pages/other/FAQ'));
-const Pricing = React.lazy(() => import('pages/other/Pricing'));
 const Maintenance = React.lazy(() => import('pages/other/Maintenance'));
-const Starter = React.lazy(() => import('pages/other/Starter'));
-const PreLoader = React.lazy(() => import('pages/other/PreLoader/'));
-const Timeline = React.lazy(() => import('pages/other/Timeline'));
-
-const Landing = React.lazy(() => import('pages/landing/'));
 
 // uikit
 const Accordions = React.lazy(() => import('pages/uikit/Accordions'));
@@ -201,12 +143,12 @@ const AllRoutes = () => {
                         { path: 'forget-password', element: <LoadComponent component={ForgetPassword} /> },
                         { path: 'lock-screen', element: <LoadComponent component={LockScreen} /> },
                         { path: 'logout', element: <LoadComponent component={Logout} /> },
-                        { path: 'login2', element: <LoadComponent component={Login2} /> },
-                        { path: 'register2', element: <LoadComponent component={Register2} /> },
-                        { path: 'confirm2', element: <LoadComponent component={Confirm2} /> },
-                        { path: 'forget-password2', element: <LoadComponent component={ForgetPassword2} /> },
-                        { path: 'lock-screen2', element: <LoadComponent component={LockScreen2} /> },
-                        { path: 'logout2', element: <LoadComponent component={Logout2} /> },
+                        { path: 'login2', element: <LoadComponent component={Login} /> },
+                        { path: 'register2', element: <LoadComponent component={Register} /> },
+                        { path: 'confirm2', element: <LoadComponent component={Confirm} /> },
+                        { path: 'forget-password2', element: <LoadComponent component={ForgetPassword} /> },
+                        { path: 'lock-screen2', element: <LoadComponent component={LockScreen} /> },
+                        { path: 'logout2', element: <LoadComponent component={Logout} /> },
                     ],
                 },
                 {
@@ -221,10 +163,6 @@ const AllRoutes = () => {
                     path: 'maintenance',
                     element: <LoadComponent component={Maintenance} />,
                 },
-                {
-                    path: 'landing',
-                    element: <LoadComponent component={Landing} />,
-                },
             ],
         },
         {
@@ -236,20 +174,8 @@ const AllRoutes = () => {
                     path: 'dashboard',
                     children: [
                         {
-                            path: 'analytics',
-                            element: <LoadComponent component={AnalyticsDashboard} />,
-                        },
-                        {
                             path: 'ecommerce',
                             element: <LoadComponent component={EcommerceDashboard} />,
-                        },
-                        {
-                            path: 'project',
-                            element: <LoadComponent component={ProjectDashboard} />,
-                        },
-                        {
-                            path: 'e-wallet',
-                            element: <LoadComponent component={EWalletDashboard} />,
                         },
                     ],
                 },
@@ -257,134 +183,13 @@ const AllRoutes = () => {
                     path: 'apps',
                     children: [
                         {
-                            path: 'calendar',
-                            element: <LoadComponent component={CalendarApp} />,
-                        },
-                        {
-                            path: 'chat',
-                            element: <LoadComponent component={ChatApp} />,
-                        },
-                        {
-                            path: 'crm',
-                            children: [
-                                {
-                                    path: 'dashboard',
-                                    element: <LoadComponent component={CRMDashboard} />,
-                                },
-                                {
-                                    path: 'projects',
-                                    element: <LoadComponent component={CRMProjects} />,
-                                },
-                                {
-                                    path: 'management',
-                                    element: <LoadComponent component={CRMManagement} />,
-                                },
-                                {
-                                    path: 'clients',
-                                    element: <LoadComponent component={CRMClients} />,
-                                },
-                                {
-                                    path: 'orders',
-                                    element: <LoadComponent component={CRMOrderList} />,
-                                },
-                            ],
-                        },
-                        {
                             path: 'ecommerce',
                             children: [
                                 {
                                     path: 'products',
                                     element: <LoadComponent component={EcommerceProducts} />,
                                 },
-                                {
-                                    path: 'details',
-                                    element: <LoadComponent component={ProductDetails} />,
-                                },
-                                {
-                                    path: 'orders',
-                                    element: <LoadComponent component={Orders} />,
-                                },
-                                {
-                                    path: 'order/details',
-                                    element: <LoadComponent component={OrderDetails} />,
-                                },
-                                {
-                                    path: 'customers',
-                                    element: <LoadComponent component={Customers} />,
-                                },
-                                {
-                                    path: 'shopping-cart',
-                                    element: <LoadComponent component={Cart} />,
-                                },
-                                {
-                                    path: 'checkout',
-                                    element: <LoadComponent component={Checkout} />,
-                                },
-                                {
-                                    path: 'sellers',
-                                    element: <LoadComponent component={Sellers} />,
-                                },
                             ],
-                        },
-                        {
-                            path: 'email',
-                            children: [
-                                {
-                                    path: 'inbox',
-                                    element: <LoadComponent component={Inbox} />,
-                                },
-                                {
-                                    path: 'details',
-                                    element: <LoadComponent component={EmailDetail} />,
-                                },
-                            ],
-                        },
-                        {
-                            path: 'tasks',
-                            children: [
-                                {
-                                    path: 'list',
-                                    element: <LoadComponent component={TaskList} />,
-                                },
-                                {
-                                    path: 'kanban',
-                                    element: <LoadComponent component={Kanban} />,
-                                },
-                                {
-                                    path: 'details',
-                                    element: <LoadComponent component={TaskDetails} />,
-                                },
-                            ],
-                        },
-
-                        {
-                            path: 'projects',
-                            children: [
-                                {
-                                    path: 'list',
-                                    element: <LoadComponent component={ProjectList} />,
-                                },
-                                {
-                                    path: 'details',
-                                    element: <LoadComponent component={ProjectDetail} />,
-                                },
-                                {
-                                    path: 'gantt',
-                                    element: <LoadComponent component={ProjectGannt} />,
-                                },
-                                {
-                                    path: 'new',
-                                    element: <LoadComponent component={ProjectForm} />,
-                                },
-                            ],
-                        },
-                        {
-                            path: 'social',
-                            element: <LoadComponent component={SocialFeed} />,
-                        },
-                        {
-                            path: 'file',
-                            element: <LoadComponent component={FileManager} />,
                         },
                     ],
                 },
@@ -392,40 +197,8 @@ const AllRoutes = () => {
                     path: 'pages',
                     children: [
                         {
-                            path: 'starter',
-                            element: <LoadComponent component={Starter} />,
-                        },
-                        {
-                            path: 'profile',
-                            element: <LoadComponent component={Profile} />,
-                        },
-                        {
-                            path: 'profile2',
-                            element: <LoadComponent component={Profile2} />,
-                        },
-                        {
-                            path: 'pricing',
-                            element: <LoadComponent component={Pricing} />,
-                        },
-                        {
                             path: 'error-404-alt',
                             element: <LoadComponent component={ErrorPageNotFoundAlt} />,
-                        },
-                        {
-                            path: 'timeline',
-                            element: <LoadComponent component={Timeline} />,
-                        },
-                        {
-                            path: 'invoice',
-                            element: <LoadComponent component={Invoice} />,
-                        },
-                        {
-                            path: 'faq',
-                            element: <LoadComponent component={FAQ} />,
-                        },
-                        {
-                            path: 'preloader',
-                            element: <LoadComponent component={PreLoader} />,
                         },
                     ],
                 },
